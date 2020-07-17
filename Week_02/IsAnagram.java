@@ -7,32 +7,6 @@ package com.flying.leetcode.mypractise;
 public class IsAnagram {
 
     /**
-     * the worst solution, Exactly not recommend
-     * @param s
-     * @param t
-     * @return
-     */
-    public static boolean isAnagram(String s, String t) {
-        //遍历字符串s，然后依次删除出现在字符串t中对应的字符，直到最后字符串t为空，即返回true，否则返回false
-        int sLength = s.length();
-        int tLength = t.length();
-        if(sLength != tLength){
-            return false;
-        }
-        if(sLength == 0){
-            return true;
-        }
-        char[] chars = s.toCharArray();
-        for(int i=0;i<=sLength/2 && i<=sLength-i-1;++i){
-            String strFront = String.valueOf(chars[i]);
-            String strLast = String.valueOf(chars[sLength-i-1]);
-            t = t.replaceFirst(strFront,"");
-            t = t.replaceFirst(strLast,"");
-        }
-        return t.length() == 0;
-    }
-
-    /**
      * better solution
      * @param s
      * @param t
@@ -62,6 +36,27 @@ public class IsAnagram {
             }
         }
         return true;
+    }
+
+    /**
+     * better solution
+     * @param s
+     * @param t
+     * @return
+     */
+    public static boolean isAnagram3(String s, String t) {
+        int sLength = s.length();
+        int tLength = t.length();
+        if(sLength != tLength){
+            return false;
+        }
+        char[] chars = s.toCharArray();
+        char[] chart = t.toCharArray();
+        Arrays.sort(chars);
+        Arrays.sort(chart);
+        s = String.valueOf(chars);
+        t = String.valueOf(chart);
+        return s.equals(t);
     }
 
     /**
