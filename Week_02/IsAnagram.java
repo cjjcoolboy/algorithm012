@@ -1,5 +1,3 @@
-package com.flying.leetcode.mypractise;
-
 /**
  * 有效的字母异位词
  * leetcode -- 242
