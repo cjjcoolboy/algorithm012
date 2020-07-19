@@ -179,14 +179,14 @@
    - 性能分析   
       - 通过使用JMH测试，结果发现使用lambda和并行stream遍历HashMap是比较快
       > Benchmark                      Mode  Cnt  Score   Error  Units
-        HashMapTest.forLoopEntrySet    avgt    5  2.020 ± 0.540   s/op
-        HashMapTest.forLoopKeySet      avgt    5  2.005 ± 0.392   s/op
-        HashMapTest.iteratorEntrySet   avgt    5  2.123 ± 0.496   s/op
-        HashMapTest.iteratorKeySet     avgt    5  2.767 ± 6.540   s/op
-        HashMapTest.lambda1            avgt    5  1.997 ± 0.343   s/op
-        HashMapTest.lambda2            avgt    5  2.038 ± 0.625   s/op
-        HashMapTest.parallelStreamApi  avgt    5  1.956 ± 0.256   s/op
-        HashMapTest.streamApi          avgt    5  2.085 ± 0.448   s/op          
+      > HashMapTest.forLoopEntrySet    avgt    5  2.020 ± 0.540   s/op
+      > HashMapTest.forLoopKeySet      avgt    5  2.005 ± 0.392   s/op
+      > HashMapTest.iteratorEntrySet   avgt    5  2.123 ± 0.496   s/op
+      > HashMapTest.iteratorKeySet     avgt    5  2.767 ± 6.540   s/op
+      > HashMapTest.lambda1            avgt    5  1.997 ± 0.343   s/op
+      > HashMapTest.lambda2            avgt    5  2.038 ± 0.625   s/op
+      > HashMapTest.parallelStreamApi  avgt    5  1.956 ± 0.256   s/op
+      > HashMapTest.streamApi          avgt    5  2.085 ± 0.448   s/op          
 ---
 
 #### 面试做题四件套
