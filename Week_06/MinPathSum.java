@@ -1,5 +1,5 @@
 /**
- * @Deseription 最小路径和
+ * 最小路径和
  * leetcode--64
  **/
 public class MinPathSum {
